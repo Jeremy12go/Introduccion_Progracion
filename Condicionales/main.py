@@ -2,19 +2,19 @@
 def funcion_1(a, b):
     return a + b
 
-#funcion con una condicional
+#condicional
 def funcion_2(a,b):
     if(a > b):
         return a - b
 
-#funcion con una condicional y caso contrario
+#condicional y caso contrario
 def funcion_3(a,b):
     if(a < b):
         return a * b
     else:
         return a / b
 
-#funcion con condicionales anidadas
+#condicionales anidadas
 def funcion_4(a,b):
     if(a != b):
         if (a < b):
@@ -24,6 +24,25 @@ def funcion_4(a,b):
     else:
         return a**b #a^b
 
+#Entradas y salidas de datos
+def sumaEntradas():
+    '''
+    int(...) formatea el dato de entrada a un entero, no formatear los datos
+    resulta la concatenación de los datos y no la suma deseada. Debido que en
+    python se definen los datos de forma automatica.
+    '''
+    a = int(input("Ingresar primer valor: "))
+    b = int(input("ingresar segundo valor: "))
+    c = a+b
+    print(f'El resultado es:{c}')
+
+#comparacion con booleanos
+def bool(variable_booleana):
+    #True -> verdad && False -> falso
+    if(variable_booleana == True):
+        print("Es verdad!")
+    else:
+        print("Es falso!")
 
 #verifica si el archivo actual se esta ejecutando como el archivo principal
 if __name__ == '__main__':
@@ -41,3 +60,5 @@ if __name__ == '__main__':
     print(f'{c}')
     c = funcion_4(2, 2)
     print(f'{c}')
+
+    sumaEntradas()
