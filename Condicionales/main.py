@@ -1,4 +1,13 @@
-#funciones que devuelve las operaciones entre a y b
+# ___________________________Función con retorno por caso______________________________________________________
+def funcion_mutiplo(valor):
+    if(valor % 3):
+        return 3
+    elif(valor % 5):
+        return 5
+    else:
+        return 1
+
+# ___________________________Funciones que devuelve las operaciones entre a y b________________________
 def funcion_1(a, b):
     return a + b
 
@@ -21,6 +30,16 @@ def funcion_4(a,b):
             return a * b
         else:
             return a / b
+    else:
+        return a**b #a^b
+
+
+#condicionales lineales de distintas condiciones
+def funcion_5(a,b):
+    if(a != b):
+        return a * b
+    elif(a < b):
+        return a / b
     else:
         return a**b #a^b
 
