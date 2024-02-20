@@ -48,8 +48,6 @@ def imprimir_arreglo(arreglo):
         i+=1
 
 
-# ___________________________Diccionarios_____________________________________________________
-
 if __name__ == '__main__':
 
     #___________________________Arreglos___________________________________________________________
@@ -92,3 +90,40 @@ if __name__ == '__main__':
     print(f"Largo de la tupla: {len(tupla_A)}")
 
     # ___________________________Diccionarios_____________________________________________________
+
+    #Declaración
+
+    auto = {
+        "Marca" : "Ford",
+        "Modelo" : "Mustang",
+        "Año": 1964,
+    }
+
+    personas = [
+        {
+            "Nombre" : "Juan",
+            "Apellido" : "Carlos",
+            "Edad" : 21,
+        },
+        {
+            "Nombre": "Jarod",
+            "Apellido": "Concha",
+            "Edad": 20,
+        },
+        {
+            "Nombre": "Jesús",
+            "Apellido": "Correa",
+            "Edad": 21,
+        }
+    ]
+
+    print(f"{auto['Modelo']}")
+
+    auto['Modelo'] = "ALGO"
+    print(f"{auto['Modelo']}")
+    print(f"{len(auto)}")
+
+    print(f"{personas[0]['Nombre']}")
+    personas[0]['Nombre'] = "Pedro"
+    print(f"{personas[0]['Nombre']}")
+    print(f"{len(personas)}")

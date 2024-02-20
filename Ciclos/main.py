@@ -1,7 +1,42 @@
 import random
 
+import time
 # ___________________________switch___________________________________________________________________
 
+def usoSwitch():
+    #declaración de función dentro de una función
+    def menu():
+        print("\n____________________________Menu__________________________")
+        print("#1_______________________Acción 1___________________________")
+        print("#2_______________________Acción 2___________________________")
+        print("#3_______________________Acción 3___________________________")
+        print("#0__________________________Salir_________________________")
+
+    condition = True
+    while condition:
+        menu()
+
+        eleccion = int(input("\nIngrese el numero que le sigue al # para la opcción deseada:"))
+
+        if (eleccion >= 0 and eleccion < 4):
+
+            match eleccion:
+                case 1:
+                    print("Realizando acción #1...")
+                    time.sleep(2) #realiza un delay de 3s
+                    print("Se ha realizado la acción correctamente")
+                case 2:
+                    print("Realizando acción #2...")
+                    time.sleep(2)  # realiza un delay de 3s
+                    print("Se ha realizado la acción correctamente")
+                case 3:
+                    print("Realizando acción #3...")
+                    time.sleep(2)  # realiza un delay de 3s
+                    print("Se ha realizado la acción correctamente")
+                case 0:
+                    condition = False
+        else:
+            print("\n                     ¡Eleccion invalida!")
 
 
 # ___________________________Valores random___________________________________________________________
@@ -42,4 +77,5 @@ def tablaMultiplicarForAnidado(n):
         print("") # salto de linea
 
 if __name__ == '__main__':
-    tablaMultiplicarForAnidado(10)
+    #tablaMultiplicarForAnidado(10)
+    usoSwitch()
