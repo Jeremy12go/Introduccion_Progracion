@@ -1,47 +1,47 @@
-#___________________________Arreglos___________________________________________________________
-def swap_arreglos(arreglo_A, arreglo_B):
+#___________________________Listas___________________________________________________________
+def swap_list(list_A, list_B):
     i = 0
-    k = len(arreglo_A)-1
+    k = len(list_A)-1
 
     while (i <= k):
         '''
         swap es tan facil como utilizacion de un auxiliar para no perder ningun valor al momento de intercambiar
-        cada elemento de los arreglos
+        cada elemento de las listas
         '''
-        aux = arreglo_A[i]
-        arreglo_A[i] = arreglo_B[i]
-        arreglo_B[i] = aux
+        aux = list_A[i]
+        list_A[i] = list_B[i]
+        list_B[i] = aux
         i+=1
 
-def add_arreglos(arreglo_A, arreglo_B):
+def add_elements_list( list_A, list_B):
     i = 0
-    k = len(arreglo_B)-1
+    k = len(list_B)-1
     while(i <= k):
         '''
-        Si tenemos una arreglo de indice maximo = k ; append(n) agrega el valor de 'n' a en una posicion k+1
+        Si tenemos una lista de indice maximo = k ; append(n) agrega el valor de 'n' a en una posicion k+1 de la lista
         '''
-        arreglo_A.append(arreglo_B[i])
+        list_A.append(list_B[i])
         i+=1
-    return arreglo_A
+    return list_A
 
-def delete_unElemento(arreglo_A):
+def delete_element(list):
     '''
     pop(n), elimina el elemento que se encuentra en la posicion 'n', por lo cual dejar el parentesis vacio ( ),
     indica que el indice es 0
     '''
-    arreglo_A.pop()
-    return arreglo_A
+    list.pop()
+    return list
 
-def imprimir_arreglo(arreglo):
+def print_list(list):
     i = 0
     print("[", end="")
-    while(i <= len(arreglo)-1):
+    while(i <= len(list)-1):
         '''
-        Al ser 'i' una variable que comienza en 0, se recorre el arreglo hasta la limitacion del ciclo
-        que debe siempre estar en concordancia con el largo del arreglo
+        Al ser 'i' una variable que comienza en 0, se recorre la lista hasta la limitacion del ciclo
+        que debe siempre estar en concordancia con el largo de la lista
         '''
-        print(f"{arreglo[i]}", end="")
-        if( i == len(arreglo)-1):
+        print(f"{list[i]}", end="")
+        if( i == len(list)-1):
             print("]")
         else:
             print(",", end="")
@@ -52,30 +52,32 @@ if __name__ == '__main__':
 
     #___________________________Arreglos___________________________________________________________
 
-    #Los arreglos pueden ser de distintos tipos de datos
-    arreglo_A = ['a', 'b', 'c']
-    arreglo_B = [1, 2, 3]
-    arreglo_C = ['z', 'y', 'x']
+    #Las listas pueden ser de distintos tipos de datos
+    list_A = ['a', 'b', 'c']
+    list_B = [1, 2, 3]
+    list_C = ['z', 'y', 'x']
+    list_D = [ 3.2, "Perro", 'A', 20, True]
+
 
     '''
     Los indices negativos recorren el arreglo de forma inversa, estando desfazandos de los indices
     positivos en 1 y teniendo la limitacion de rango. Por lo cual:
         arreglo_A[-4] es un error al intentar acceder a un indice inexistente
     '''
-    print(f"Valor de indice negativo en el arreglo: {arreglo_A[-1]}")
+    print(f"Valor de indice negativo en el arreglo: {list_A[-1]}")
 
     print("Antes:")
-    imprimir_arreglo(arreglo_A)
-    imprimir_arreglo(arreglo_B)
+    print_list(list_A)
+    print_list(list_B)
 
-    #swap_arreglos(arreglo_A, arreglo_B)
-    #add_arreglos(arreglo_A, arreglo_B)
-    delete_unElemento(arreglo_A)
-    delete_unElemento(arreglo_B)
+    swap_list(list_A, list_B)
+    add_elements_list(list_A, list_B)
+    delete_element(list_A)
+    delete_element(list_B)
 
     print("\nDespues:")
-    imprimir_arreglo(arreglo_A)
-    imprimir_arreglo(arreglo_B)
+    print_list(list_A)
+    print_list(list_B)
 
     # ___________________________Tuplas___________________________________________________________
 
