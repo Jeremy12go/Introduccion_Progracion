@@ -1,3 +1,5 @@
+import array
+
 #___________________________Listas___________________________________________________________
 def swap_list(list_A, list_B):
     i = 0
@@ -49,11 +51,12 @@ def print_list(list):
 
 
 if __name__ == '__main__':
-
-    #___________________________Arreglos___________________________________________________________
+    #___________________________Listas___________________________________________________________
 
     #Las listas pueden ser de distintos tipos de datos
+
     list_A = ['a', 'b', 'c']
+
     list_B = [1, 2, 3]
     list_C = ['z', 'y', 'x']
     list_D = [ 3.2, "Perro", 'A', 20, True]
@@ -79,6 +82,11 @@ if __name__ == '__main__':
     print_list(list_A)
     print_list(list_B)
 
+    # ___________________________Arreglos________________________________________________________
+
+    arreglo = array.array('i', [1, 2, 3, 4])
+    print(arreglo[0] + arreglo[3])
+
     # ___________________________Tuplas___________________________________________________________
 
     tupla_A = ("Auto", "Barco", "Avion")
@@ -94,7 +102,6 @@ if __name__ == '__main__':
     # ___________________________Diccionarios_____________________________________________________
 
     #Declaración
-
     auto = {
         "Marca" : "Ford",
         "Modelo" : "Mustang",
