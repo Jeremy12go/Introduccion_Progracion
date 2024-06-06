@@ -50,7 +50,32 @@ def print_list(list):
         i+=1
 
 
+def fizzBuzz(n):
+    lista = []
+    i = 1
+    while(i<=n):
+        condicion = 0
+        if(i%3==0):
+            condicion+=1
+        elif(i%5==0):
+            condicion+=2
+
+        print(f"i:{i} -- condicion: {condicion}")
+        if(condicion==3):
+            lista.append("FizzBuzz")
+        elif(condicion==2):
+            lista.append("Buzz")
+        elif(condicion==1):
+            lista.append("Fizz")
+        else:
+            lista.append(i)
+        i+=1
+
+    print_list(lista)
+
+
 if __name__ == '__main__':
+    """
     #___________________________Listas___________________________________________________________
 
     #Las listas pueden ser de distintos tipos de datos
@@ -135,4 +160,5 @@ if __name__ == '__main__':
     print(f"{personas[0]['Nombre']}")
     personas[0]['Nombre'] = "Pedro"
     print(f"{personas[0]['Nombre']}")
-    print(f"{len(personas)}")
+    print(f"{len(personas)}")"""
+    fizzBuzz(15)

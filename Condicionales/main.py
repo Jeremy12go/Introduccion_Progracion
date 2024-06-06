@@ -55,6 +55,35 @@ def sumaEntradas():
     c = a+b
     print(f'El resultado es:{c}')
 
+def multiplo_mayor (a, aa):
+
+    if a == 0 or aa == 0:
+        print("Lo siento, este programa no admite valores nulos.")
+        return 0
+    elif a < 0 or aa < 0:
+        print("Lo siento, este programa no admite valores negativos.")
+        return 0
+
+    if (a >= aa):
+        if (a % aa != 0):
+            print(f"{a} no es múltiplo de {aa}.")
+        else:
+            print(f"{a} es múltiplo de {aa}.")
+    else:
+        if (aa % a != 0):
+            print(f"{aa} no es múltiplo de {a}.")
+        else:
+            print(f"{aa} es múltiplo de {a}.")
+
+def comparadorDe_años(fecha_1, fecha_2):
+    print("COMPARADOR DE AÑOS")
+    if fecha_1 > fecha_2:
+        print(f"Desde el año {fecha_2} han pasado {fecha_1 - fecha_2} años.")
+    elif fecha_1 < fecha_2:
+        print(f"Para llegar al año {fecha_2} faltan {fecha_2 - fecha_1} años.")
+    else:
+        print("¡Son el mismo año!")
+
 #comparacion con booleanos
 def bool(variable_booleana):
     #True -> verdad && False -> falso
@@ -62,6 +91,13 @@ def bool(variable_booleana):
         print("Es verdad!")
     else:
         print("Es falso!")
+
+def anno(anno):
+    if(anno%100 !=0 and anno%4 == 0 or anno%400 == 0):
+        print("Anno bisiesto")
+    else:
+        print("No Anno bisiesto")
+
 
 #verifica si el archivo actual se esta ejecutando como el archivo principal
 if __name__ == '__main__':
@@ -71,6 +107,7 @@ if __name__ == '__main__':
     #se imprime c
     print(f'{c}')
 
+    anno(2024)
     #notar que la variable c puede ser reasignada tantas veces como sea necesario
 
     c = funcion_2(2, 2) #notar que como la condicion no se cumple y c se igual la nada, por lo cual es None
@@ -80,4 +117,5 @@ if __name__ == '__main__':
     c = funcion_4(2, 2)
     print(f'{c}')
 
-    sumaEntradas()
+    #sumaEntradas()
+    comparadorDe_años(2300,2100)

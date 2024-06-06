@@ -76,6 +76,54 @@ def tablaMultiplicarForAnidado(n):
             print(f'{i*j}', end = "|") # end determina que habra al final de la impresion
         print("") # salto de linea
 
+# ___________________________Palindromo______________________________________________________________
+
+def palindromo(cadena):
+
+    i = 0
+    largo = len(cadena)-1
+    j = largo
+    while (i <= largo//2):
+        if(cadena[i] != cadena[j]):
+            print("No es palindromo")
+            break
+        elif(i == j):
+            print("Es palindromo")
+            break
+        i+=1
+        j-=1
+
+# ___________________________Cadenas______________________________________________________________
+def concatenar_cadenas(cad_1 , cad_2):
+    return cad_1 + cad_2
+
+def manipular_cadenas(cad_1, cad_2):
+    cad_3 = "" #vacia
+    i = 0
+    while(i < len(cad_1)):
+
+        cad_3 += cad_1[i]
+        cad_3 += cad_2[i]
+
+        i+=1
+    return cad_3
+
 if __name__ == '__main__':
+
     #tablaMultiplicarForAnidado(10)
-    usoSwitch()
+    #usoSwitch()
+    palindromo("OsSO")
+
+# ___________________________Cadenas______________________________________________________________
+
+cadena_1 = "Nombre"
+cadena_2 = 'Apellido'
+
+cadena_3 = concatenar_cadenas(cadena_1, cadena_2)
+cadena_4 = manipular_cadenas(cadena_1, cadena_2)
+print(cadena_3)
+print(cadena_4)
+
+condicion = False
+if(not condicion):
+    print("??")
